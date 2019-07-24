@@ -1,10 +1,10 @@
-const path = require('path');
+const path = require('path')
 const GRPCServer = require('./lib/grpcServer')
 
 const books = [
     { id: '1', title: 'aaaa', author: 'dillon', contentType: 'txt' },
     { id: '2', title: 'bbbb', author: 'liang', contentType: 'txt' },
-];
+]
 
 const bookInfo = {
     id: '5c46e3fa51d14c0897003c2a',

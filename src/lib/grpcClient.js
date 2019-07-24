@@ -1,5 +1,5 @@
-const protoLoader = require('@grpc/proto-loader');
-const grpc = require('grpc');
+const protoLoader = require('@grpc/proto-loader')
+const grpc = require('grpc')
 
 /**
  * options
@@ -27,10 +27,10 @@ class GRPCClient {
             enums: String,
             defaults: true,
             oneofs: true
-        });
+        })
 
-        const protoDescriptor = grpc.loadPackageDefinition(packageDefinition);
-        const service = protoDescriptor[this.options.packageName][this.options.serviceName];
+        const protoDescriptor = grpc.loadPackageDefinition(packageDefinition)
+        const service = protoDescriptor[this.options.packageName][this.options.serviceName]
         const client = new service(this.options.url, grpc.credentials.createInsecure())
         return client
     }
