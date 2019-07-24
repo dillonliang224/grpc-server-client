@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package booksvc;
+
+service BookService {
+  rpc FindById(FindByIdReq) returns (BookInfo){}
+  rpc FindBooks(Empty) returns (BookList){}
+  rpc SayHello(HelloReq) returns (HelloRes){}
+}
+
+message FindByIdReq {
+  string id = 1;
+}
+
+message Book {
+  string id = 1;
+  string title = 2;
+  string author = 3;
+  string contentType = 4;
+}
+
+message BookInfo {
+  Book book = 1;
+}
+
+message BookList {
+  repeated Book books = 1;
+}
+
+message Empty {}
+
+message HelloReq {
+  string name = 1;
+}
+
+message HelloRes {
+  string msg = 1;
+}

@@ -1,0 +1,20 @@
+{
+  "name": "grpc-server-client",
+  "version": "0.0.1",
+  "description": "grpc server client demo",
+  "main": "index.js",
+  "scripts": {
+    "server": "node src/server.js",
+    "client": "node src/client.js"
+  },
+  "author": "Dillon Liang <dillonliang@163.com>",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.1",
+    "express": "^4.17.1",
+    "grpc": "^1.22.2"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "license": "MIT"
+}
